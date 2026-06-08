@@ -1,0 +1,3 @@
+## 2024-06-08 - Keyboard accessibility and form semantics
+**Learning:** The application's inline styles usage resulted in several interactive elements (like "Forgot password?" and "Sign up" links) being incorrectly implemented as un-focusable `<span>` tags. Applying reset inline styles (`background: "none", border: "none", padding: 0, font: "inherit"`) onto native semantic elements like `<button>` preserves the aesthetic design of the app while fixing keyboard focus loops and keyboard selection entirely.
+**Action:** When finding inline style elements for actions, convert them to `<button type="button">` with native-styled reset variables that visually preserve the appearance rather than relying solely on `onClick` bound to `<span>` tags.
