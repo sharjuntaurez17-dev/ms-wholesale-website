@@ -1,0 +1,3 @@
+## 2024-06-09 - Keyboard accessible text links
+**Learning:** In Splitwork's UI, interactive text elements (like "Forgot password?" and "Sign up") are sometimes implemented as `<span>` tags styled with inline properties. This makes them inaccessible to keyboard users because they cannot be focused or triggered with keyboard actions.
+**Action:** Always replace interactive text `<span>` tags with semantic native elements, such as `<button type="button">`, and reset their inline styles (`background: 'none', border: 'none', padding: 0, fontFamily: 'inherit'`) to preserve the visual appearance while improving keyboard accessibility.
