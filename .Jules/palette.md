@@ -1,0 +1,3 @@
+## 2026-06-10 - Replace Interactive Spans with Semantic Buttons
+**Learning:** The application's extensive use of inline styles occasionally leads to interactive elements like "Forgot password?" and "Sign up" being incorrectly implemented as inaccessible `<span>` tags. These break keyboard navigation (cannot be focused via Tab) and screen reader support.
+**Action:** Always convert interactive text-only or icon-only elements that function as actions (not links) to native semantic elements (like `<button type="button">`) with reset inline styles (`background: "none", border: "none", padding: 0`) to preserve visual appearance while maintaining native accessibility.
