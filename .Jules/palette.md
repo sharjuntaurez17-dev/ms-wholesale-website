@@ -1,0 +1,3 @@
+## 2025-02-20 - Convert interactive spans to semantic buttons
+**Learning:** In this application, due to extensive use of inline styles, interactive elements like "Forgot password?" and "Sign up" links were incorrectly implemented as `<span>` tags. This breaks keyboard accessibility because spans are not inherently focusable or triggerable via the keyboard.
+**Action:** Consistently convert these interactive `<span>` elements to native semantic `<button type="button">` or `<a>` elements with reset inline styles (e.g., `background: 'none', border: 'none', padding: 0`) to ensure they remain keyboard accessible without changing the visual design.
