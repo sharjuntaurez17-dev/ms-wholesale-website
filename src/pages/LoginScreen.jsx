@@ -119,10 +119,11 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Forgot password */}
           <div style={{ textAlign: "right", marginTop: -6 }}>
-            <span style={{
+            <button type="button" style={{
+              background: "none", border: "none", padding: 0,
               color: C.teal, fontSize: 12.5, fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif", cursor: "pointer",
-            }}>Forgot password?</span>
+            }}>Forgot password?</button>
           </div>
 
           {/* Error */}
@@ -196,9 +197,12 @@ export default function LoginScreen({ onLogin }) {
         fontFamily: "'DM Sans', sans-serif",
       }}>
         Don't have an account?{" "}
-        <span style={{ color: C.teal, fontWeight: 700, cursor: "pointer" }}>
+        <button type="button" style={{
+          background: "none", border: "none", padding: 0,
+          color: C.teal, fontSize: 13.5, fontFamily: "'DM Sans', sans-serif", fontWeight: 700, cursor: "pointer"
+        }}>
           Sign up
-        </span>
+        </button>
       </div>
     </div>
   );
