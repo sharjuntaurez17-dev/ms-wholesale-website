@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic Buttons
+**Learning:** Found interactive elements (like "Forgot password?" and "Sign up") implemented as inaccessible `<span>` tags with `cursor: "pointer"`. This causes keyboard accessibility issues since spans cannot receive focus and cannot be activated via the keyboard.
+**Action:** When working on this codebase, always ensure that text designed to be clicked or tapped is wrapped in semantic interactive elements such as `<button type="button">` or `<a>`. Applying a CSS style reset (`background: "none", border: "none", padding: 0`) allows semantic elements to replace spans seamlessly while inheriting inline text styles.
