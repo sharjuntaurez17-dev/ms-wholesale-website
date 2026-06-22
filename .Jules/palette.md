@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing Structural Semantics on Interactive Elements
+**Learning:** This app heavily uses inline styles, which occasionally leads to visually interactive text elements (like "Forgot password?" and "Sign up" links) being implemented as `<span>` tags. These are inaccessible to keyboard users and screen readers because they lack inherent semantic meaning and focusability.
+**Action:** When finding `<span>` elements acting as links or buttons, always convert them to native `<button type="button">` or `<a>` elements. Use the CSS style reset `background: "none", border: "none", padding: 0` to maintain their existing inline visual appearance while adding accessibility.
