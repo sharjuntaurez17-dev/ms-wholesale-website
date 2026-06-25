@@ -1,0 +1,3 @@
+## 2024-06-25 - Incorrect Form Interactions
+**Learning:** Due to extensive use of inline styles, interactive elements like "Forgot password?" and "Sign up" are occasionally implemented as inaccessible `<span>` tags. Additionally, `<label>` elements are sometimes missing structural associations with their respective `<input>` elements.
+**Action:** When finding inline-styled `<span>` tags meant for interaction, convert them to native semantic `<button type="button">` or `<a>` elements using the CSS style reset `background: "none", border: "none", padding: 0` to maintain visual appearance while fixing keyboard accessibility. Always explicitly pair `<label>` elements with their respective `<input>` elements using matching `htmlFor` and `id` attributes.
