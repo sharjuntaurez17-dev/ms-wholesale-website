@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing label associations & span interactions
+**Learning:** Found an accessibility issue pattern specific to this app's components: missing `<label>`/`<input>` associations (missing `htmlFor` and `id` pair) and interactive elements incorrectly implemented as `<span>` tags due to inline styles.
+**Action:** Always explicitly pair `<label>` elements with their respective `<input>` elements using matching `htmlFor` and `id` attributes. Convert interactive `<span>` tags to semantic native elements like `<button type="button">` or `<a>` and reset CSS to maintain the existing visual appearance (`background: "none", border: "none", padding: 0`).
