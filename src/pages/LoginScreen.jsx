@@ -83,12 +83,13 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Email */}
           <div>
-            <label style={{
+            <label htmlFor="email" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Email</label>
             <input
+              id="email"
               type="email"
               placeholder="you@example.com"
               value={email}
@@ -101,12 +102,13 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Password */}
           <div>
-            <label style={{
+            <label htmlFor="password" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Password</label>
             <input
+              id="password"
               type="password"
               placeholder="••••••••"
               value={password}
@@ -119,10 +121,11 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Forgot password */}
           <div style={{ textAlign: "right", marginTop: -6 }}>
-            <span style={{
+            <button type="button" style={{
+              background: "none", border: "none", padding: 0,
               color: C.teal, fontSize: 12.5, fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif", cursor: "pointer",
-            }}>Forgot password?</span>
+            }}>Forgot password?</button>
           </div>
 
           {/* Error */}
@@ -196,9 +199,13 @@ export default function LoginScreen({ onLogin }) {
         fontFamily: "'DM Sans', sans-serif",
       }}>
         Don't have an account?{" "}
-        <span style={{ color: C.teal, fontWeight: 700, cursor: "pointer" }}>
+        <button type="button" style={{
+          background: "none", border: "none", padding: 0,
+          color: C.teal, fontSize: 13.5, fontWeight: 700, cursor: "pointer",
+          fontFamily: "'DM Sans', sans-serif",
+        }}>
           Sign up
-        </span>
+        </button>
       </div>
     </div>
   );
