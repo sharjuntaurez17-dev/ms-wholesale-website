@@ -1,0 +1,3 @@
+## 2024-07-08 - Accessible Links and Form Labels
+**Learning:** Found a pattern where interactive links ("Forgot password?", "Sign up") were implemented as inaccessible `<span>` tags, breaking keyboard navigation. Also noticed forms lacking explicitly paired `<label>` and `<input>` elements (missing `htmlFor` and `id`).
+**Action:** Convert interactable text spans to `<button type="button">` using a CSS style reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to preserve visual design while enabling native tabbing and screen reader support. Always explicitly pair forms with matching `id` and `htmlFor` attributes.
