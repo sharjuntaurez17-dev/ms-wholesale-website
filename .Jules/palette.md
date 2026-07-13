@@ -1,0 +1,3 @@
+## 2024-07-13 - Improve Login Form Accessibility
+**Learning:** Found an accessibility issue pattern in the app's components involving missing structural associations in forms (e.g. missing `htmlFor` on `<label>` and `id` on `<input>`) and missing ARIA attributes (like `role="alert"` and `aria-live="polite"`) on dynamic error containers. This causes screen readers to misinterpret form fields and miss dynamic error messages completely.
+**Action:** Always ensure that form inputs have their structural associations explicitly paired up and that dynamic UI errors implement screen reader accessibility appropriately.
