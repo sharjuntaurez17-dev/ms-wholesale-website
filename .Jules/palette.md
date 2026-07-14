@@ -1,0 +1,3 @@
+## 2024-05-18 - Form Accessibility and Interactive Elements
+**Learning:** In this application's components, interactive elements like "Forgot password" and "Sign up" are sometimes implemented as inaccessible `<span>` tags due to inline styling constraints. Furthermore, forms may lack structural associations (missing `htmlFor` and `id`).
+**Action:** Always explicitly pair `<label>` and `<input>` elements using `htmlFor` and `id`. Convert interactive `<span>` elements to native semantic elements (like `<button type="button">`) and use the CSS style reset `background: "none", border: "none", padding: 0, font: "inherit"` to maintain visual appearance while enabling keyboard accessibility.
