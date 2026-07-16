@@ -1,0 +1,3 @@
+## 2024-07-16 - Inline Styles Leading to Inaccessible Interactive Spans
+**Learning:** The application heavily relies on inline styles, which occasionally causes developers to use `<span>` elements for interactive items (like "Forgot password?" and "Sign up") simply to maintain visual consistency without adding unwanted default button styles.
+**Action:** Always convert interactive `<span>` elements to native semantic `<button type="button">` or `<a>` tags. To maintain the existing visual appearance while enabling keyboard accessibility and correct screen reader semantics, apply the CSS style reset `background: "none", border: "none", padding: 0, font: "inherit"`.
