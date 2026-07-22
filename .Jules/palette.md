@@ -1,0 +1,3 @@
+## 2024-07-22 - Inline Styles Masking Inaccessible Links
+**Learning:** In this application, inline styles heavily disguise interactive `<span>` elements as buttons (e.g., "Forgot password?" and "Sign up" links). These elements completely lack keyboard accessibility. Also, form labels were not explicitly paired with their inputs using `htmlFor` and `id`, breaking screen reader associations.
+**Action:** Always scan for interactive `<span>` elements disguised by CSS and convert them to native `<button type="button">` with CSS resets (`background: "none", border: "none", padding: 0, font: "inherit"`). Ensure `<label>` elements are strictly paired with inputs.
