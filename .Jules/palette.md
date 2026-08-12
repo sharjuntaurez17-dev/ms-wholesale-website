@@ -1,0 +1,3 @@
+## 2024-08-12 - Missing Accessibility in Login Screen
+**Learning:** Found several missing structural associations in form elements (e.g. `<label>` elements missing `htmlFor` and `id` linking them to `<input>` tags), interactive elements like "Forgot password?" and "Sign up" implemented as inaccessible `<span>` tags, and missing alert roles for conditionally rendered error messages.
+**Action:** When working on form accessibility, ensure to convert pseudo-buttons like `<span>` to native semantic `<button type="button">` using style resets, explicitly pair `<label>` and `<input>` with corresponding `htmlFor` and `id` attributes, and add `role="alert"` and `aria-live="polite"` to dynamically rendered error containers.
