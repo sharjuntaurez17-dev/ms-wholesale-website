@@ -1,0 +1,3 @@
+## 2024-08-13 - Form Controls and Semantic Buttons
+**Learning:** Found that custom inline styled elements in forms often lose explicit connection (labels missing `htmlFor`, inputs missing `id`), and actionable text strings ("Forgot password?", "Sign up") were built using `<span>` rather than keyboard-accessible semantically correct `<button>` tags.
+**Action:** Always ensure `<label>` and `<input>` elements are explicitly paired with `htmlFor` and `id`, convert pseudo-buttons using `<span>` to semantic `<button type="button">` using a CSS style reset, and ensure dynamic error messages announce properly to screen readers via `role="alert"` and `aria-live="polite"`.
