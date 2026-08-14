@@ -1,0 +1,47 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ms-wholesale",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npx.cmd",
+      "runtimeArgs": ["serve", "C:\\Users\\SHARJU~1\\Desktop\\MS-WHO~1", "--no-clipboard"],
+      "port": 3001,
+      "autoPort": true
+    },
+    {
+      "name": "sswin-landing",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npm.cmd",
+      "runtimeArgs": ["--prefix", "C:\\Users\\sharjun ahmed\\Desktop\\sswin-landing", "run", "dev", "--", "--port", "5174", "--strictPort"],
+      "port": 5174,
+      "autoPort": false
+    },
+    {
+      "name": "split-work",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npm.cmd",
+      "runtimeArgs": ["--prefix", "C:\\Users\\sharjun ahmed\\Desktop\\Split-Work-latest", "run", "dev", "--", "--port", "5176", "--strictPort"],
+      "port": 5176,
+      "autoPort": false
+    },
+    {
+      "name": "biodata",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npx.cmd",
+      "runtimeArgs": ["serve", "C:\\Users\\sharjun ahmed\\Desktop\\Sharjun-Bio-data", "--no-clipboard"],
+      "port": 3002,
+      "autoPort": true
+    },
+    {
+      "name": "upgrade",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npx.cmd",
+      "runtimeArgs": ["serve", "C:\\Users\\sharjun ahmed\\Desktop\\claude code\\upgrade-website", "--no-clipboard"],
+      "port": 3006,
+      "autoPort": true
+    },
+    {
+      "name": "ms-seo-preview",
+      "runtimeExecutable": "C:\\PROGRA~1\\nodejs\\npx.cmd",
+      "runtimeArgs": ["serve", "C:\\Users\\SHARJU~1\\AppData\\Local\\Temp\\claude\\C--Users-sharjun-ahmed-Desktop-claude-code\\72954031-dfde-4ad5-8639-d306cbada328\\scratchpad\\ms-wholesale-site", "--no-clipboard"],
+      "port": 3009,
+      "autoPort": true
+    }
+  ]
+}
