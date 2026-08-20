@@ -1,0 +1,3 @@
+## 2024-11-20 - Ensure accessible interactive elements and form labels
+**Learning:** Found several issues with missing explicit label associations (htmlFor/id) on forms and interactive actions implemented as `<span>` tags instead of semantic `<button>`s, affecting keyboard accessibility and screen reader support. Dynamic error messages were also missing `role="alert"`.
+**Action:** Always associate labels with inputs using matching `htmlFor` and `id`. Use semantic elements like `<button type="button">` with reset styles (`background: "none", border: "none", padding: 0, font: "inherit"`) for text links/actions, and add `role="alert" aria-live="polite"` to dynamically appearing error containers.
