@@ -1,0 +1,3 @@
+## 2024-08-22 - Form & Keyboard Accessibility Improvements
+**Learning:** Found a pattern in this application where interactive elements like "Forgot password?" and "Sign up" are implemented as `<span>`s with `cursor: "pointer"`, missing keyboard accessibility. Also, form inputs are missing proper `id` and `<label htmlFor>` associations.
+**Action:** When working on this application, always convert interactive `<span>`s to `<button type="button">` with style resets (`background: "none", border: "none", padding: 0, font: "inherit"`) and explicitly associate `<label>` and `<input>` using `htmlFor` and `id`.
