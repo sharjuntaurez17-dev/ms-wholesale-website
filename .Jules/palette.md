@@ -1,0 +1,3 @@
+## 2024-05-15 - Missing form label associations and error message a11y
+**Learning:** Custom inputs and form implementations in this application often lack structural accessibility associations (such as `htmlFor` on `<label>` elements matching `id` on `<input>` elements). Dynamic form validation messages also frequently lack ARIA live region attributes (`role="alert"` and `aria-live="polite"`).
+**Action:** When working on form accessibility improvements, explicitly pair `<label>` elements with their respective `<input>` elements using matching `htmlFor` and `id` attributes. Additionally, ensure that dynamic error containers implement screen reader accessibility by adding `role="alert"` and `aria-live="polite"`.
