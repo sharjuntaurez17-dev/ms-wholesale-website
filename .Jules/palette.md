@@ -1,0 +1,3 @@
+## 2024-05-15 - Missing form associations and inaccessible interactive elements
+**Learning:** Some forms in this application use `<label>` and `<input>` elements but fail to associate them structurally using `htmlFor` and `id`. Additionally, some interactive elements like "Forgot password?" and "Sign up" are implemented as `<span>` tags, which are not accessible by keyboard.
+**Action:** Always ensure `<label>` and `<input>` pairs are associated with matching `htmlFor` and `id` attributes. Convert interactive `<span>` tags to native semantic elements (like `<button type="button">` or `<a>`) with a CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to maintain visual appearance while enabling keyboard accessibility.
