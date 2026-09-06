@@ -1,0 +1,3 @@
+## 2024-11-20 - Keyboard Accessibility on Clickable Spans
+**Learning:** This application sometimes implements interactive elements like "Forgot password?" and "Sign up" as `<span>` tags with `cursor: "pointer"` and inline styles, which are completely inaccessible to keyboard users (cannot be tabbed to or activated with Enter/Space).
+**Action:** Always check interactive text for semantic tags. Convert `<span>` elements handling click events into `<button type="button">` using a CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to achieve instant keyboard accessibility while preserving the exact visual appearance.
