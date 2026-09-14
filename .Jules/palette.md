@@ -1,0 +1,3 @@
+## 2025-02-21 - Form Associations & Accessible Buttons
+**Learning:** Found instances where forms lacked proper `htmlFor` and `id` associations, and interactive elements (like "Forgot password" or "Sign up") were implemented as inaccessible `<span>` tags.
+**Action:** Always ensure inputs have associated `id` attributes matched with label `htmlFor` attributes for screen readers. Convert interactive `<span>` tags acting as buttons to semantic `<button type="button">` elements with a style reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to preserve visual appearance while restoring keyboard focusability and interaction.
