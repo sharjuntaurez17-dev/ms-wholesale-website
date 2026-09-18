@@ -1,0 +1,3 @@
+## 2024-11-23 - Form Accessibility & Semantic Buttons
+**Learning:** The application heavily utilizes inline styles, which frequently leads to interactive elements (like text links) being implemented as inaccessible `<span>` tags. Additionally, conditional form error messages often lack ARIA attributes to announce them to screen readers.
+**Action:** When working on interactive inline-styled text, always convert them to native semantic elements (e.g., `<button type="button">`) and apply the style reset `background: "none", border: "none", padding: 0, font: "inherit"` to maintain visual fidelity while enabling keyboard focus. For conditional errors, add `role="alert"` and `aria-live="polite"`.
