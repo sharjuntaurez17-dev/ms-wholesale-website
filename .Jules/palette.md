@@ -1,0 +1,3 @@
+## 2024-05-23 - Login Form Accessibility
+**Learning:** React login forms in this app lack explicit label-to-input association using `htmlFor` and `id`, as well as standard required flags and `aria-required`. When updating conditional errors, they also lack standard `role="alert"` and `aria-live="polite"` functionality, resulting in a poor experience for screen reader users on forms.
+**Action:** When working on form inputs and errors in this app, explicitly pair `<label>` elements using `htmlFor` with the `<input>` elements using `id`, add `required` and `aria-required="true"`, and wrap conditional error messaging in `role="alert"` and `aria-live="polite"` containers.
