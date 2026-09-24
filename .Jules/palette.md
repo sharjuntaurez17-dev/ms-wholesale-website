@@ -1,0 +1,3 @@
+## 2024-05-24 - Semantic Form Errors and Buttons
+**Learning:** Native `<span>` elements used as interactive actions (like "Sign up" or "Forgot password") fail screen reader identification and keyboard focus. Also, custom form validation needs `role="alert"` and `aria-live="polite"` otherwise screen readers do not announce error updates when validation fails. Lastly, explicit `htmlFor` and `id` linking for form labels is necessary for assistive tech context.
+**Action:** Always convert interactive text links to native `<button type="button">` with style resets. Add ARIA live regions to custom error message containers, and strictly pair `<label>` with `<input>` elements.
