@@ -1,0 +1,3 @@
+## 2023-10-27 - Inline Styles vs Semantic Elements
+**Learning:** This application relies heavily on inline styles and functional components rather than CSS classes, which frequently results in interactive elements being implemented as styled `<span>` or `<div>` tags instead of semantic `<button>` or `<a>` tags, breaking keyboard accessibility.
+**Action:** When auditing or implementing UX fixes in this codebase, explicitly look for clickable non-semantic elements and convert them to `<button type="button">` using the CSS reset pattern `background: "none", border: "none", padding: 0, font: "inherit"` to seamlessly integrate accessibility without altering the visual design.
