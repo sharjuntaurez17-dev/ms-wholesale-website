@@ -1,0 +1,3 @@
+## 2024-10-04 - Form Validation Accessibility
+**Learning:** When improving form accessibility by adding native `required` attributes to inputs that use custom React validation logic, you must also add `noValidate` to the `<form>` element. Without `noValidate`, the browser will intercept the form submission and display default HTML5 validation tooltips, preventing the custom React `onSubmit` handler (and its accessible error UI) from executing on empty fields.
+**Action:** Always ensure that adding semantic validation attributes (`required`) does not break custom form submission logic by pairing them with `<form noValidate>` when custom validation UI is preferred.
