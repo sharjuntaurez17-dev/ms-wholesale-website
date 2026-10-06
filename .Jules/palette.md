@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic Inputs and Buttons
+**Learning:** In this application, forms sometimes lack native HTML5 associations (`htmlFor` mapping to `id`) and explicit accessibility requirements (`aria-required`). Additionally, interactive elements meant to function as buttons are sometimes implemented as `<span>` tags with `cursor: "pointer"`.
+**Action:** When improving form accessibility, explicitly pair `<label>` and `<input>` using matching `htmlFor` and `id`. Add `required` and `aria-required="true"`. Also, convert interactive `<span>` elements into semantic `<button type="button">` using a CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to maintain the existing visual appearance while enabling keyboard accessibility.
