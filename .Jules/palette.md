@@ -1,0 +1,3 @@
+## 2024-10-08 - Accessible interactive elements with inline styles
+**Learning:** This application heavily relies on inline styles and functional `<span>` elements for interactive elements like "Forgot password" or "Sign up". When converting these `<span>` elements to semantic `<button type="button">` elements to improve keyboard accessibility, the native button styling breaks the visual design unless explicitly reset.
+**Action:** When converting generic tags to buttons in this design system, always apply a CSS style reset (`background: "none", border: "none", padding: 0, font: "inherit"`) inline to maintain the exact visual appearance while providing native keyboard support.
