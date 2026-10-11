@@ -1,0 +1,3 @@
+## 2024-10-11 - Semantic Interactive Elements with Inline Styles
+**Learning:** This app heavily relies on inline styles. Consequently, interactive pseudo-links ("Forgot password?", "Sign up") were built using `<span>` tags with `cursor: "pointer"`, which completely broke keyboard navigation and screen reader support.
+**Action:** Always convert these pseudo-links into semantic `<button type="button">` or `<a>` tags. To maintain visual consistency without breaking the inline style architecture, apply a CSS style reset directly inline: `background: "none", border: "none", padding: 0, font: "inherit"`.
