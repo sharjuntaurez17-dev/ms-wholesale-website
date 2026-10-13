@@ -1,0 +1,3 @@
+## 2024-10-13 - [Form Accessibility Bindings]
+**Learning:** Found that custom React input wrappers often lack structural `<label>`/`<input>` associations, missing ARIA attributes, and explicit validation properties. Furthermore, interactive "Forgot password" links were styled `<span>`s, inhibiting keyboard navigation.
+**Action:** Always add `htmlFor`/`id` combinations to pairs of labels and inputs. Convert clickable `<span>`s to native `<button>` tags with reset styles for robust keyboard accessibility, and add `role="alert"` for conditionally rendered inline validation errors.
