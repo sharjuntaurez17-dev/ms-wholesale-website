@@ -1,0 +1,3 @@
+## 2024-10-14 - Form Accessibility and Semantic Elements
+**Learning:** Found patterns where forms lacked explicit label associations, input requirements, and semantic interactive elements. Error messages did not have `role="alert"` and `aria-live="polite"`. Span tags were used for interactive elements like buttons.
+**Action:** Always explicitly associate labels and inputs using `htmlFor` and `id`, apply `required` attributes properly with `noValidate` on forms for custom validation, use screen-reader friendly alerts for dynamic errors, and replace pseudo-buttons (`<span>`) with `<button type="button">` using a CSS reset pattern (`background: "none", border: "none", padding: 0, font: "inherit"`).
