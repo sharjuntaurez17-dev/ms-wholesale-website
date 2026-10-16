@@ -83,12 +83,13 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Email */}
           <div>
-            <label style={{
+            <label htmlFor="email" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Email</label>
             <input
+              id="email"
               type="email"
               placeholder="you@example.com"
               value={email}
@@ -96,17 +97,20 @@ export default function LoginScreen({ onLogin }) {
               onFocus={() => setFocused("email")}
               onBlur={() => setFocused(null)}
               style={inputStyle("email")}
+              aria-invalid={!!error}
+              aria-describedby={error ? "login-error" : undefined}
             />
           </div>
 
           {/* Password */}
           <div>
-            <label style={{
+            <label htmlFor="password" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Password</label>
             <input
+              id="password"
               type="password"
               placeholder="••••••••"
               value={password}
@@ -114,6 +118,8 @@ export default function LoginScreen({ onLogin }) {
               onFocus={() => setFocused("password")}
               onBlur={() => setFocused(null)}
               style={inputStyle("password")}
+              aria-invalid={!!error}
+              aria-describedby={error ? "login-error" : undefined}
             />
           </div>
 
@@ -127,7 +133,7 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Error */}
           {error && (
-            <div style={{
+            <div id="login-error" role="alert" style={{
               color: "#FF6B6B", fontSize: 13, fontFamily: "'DM Sans', sans-serif",
               background: "rgba(255,107,107,0.1)", borderRadius: 10,
               padding: "10px 14px", border: "1px solid rgba(255,107,107,0.2)",
@@ -184,7 +190,7 @@ export default function LoginScreen({ onLogin }) {
             fontFamily: "'DM Sans', sans-serif",
             cursor: "pointer",
           }}>
-            {name === "Google" ? "🔵" : "🍎"} {name}
+            <span aria-hidden="true">{name === "Google" ? "🔵" : "🍎"}</span> {name}
           </button>
         ))}
       </div>
