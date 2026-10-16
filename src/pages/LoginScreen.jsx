@@ -83,12 +83,13 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Email */}
           <div>
-            <label style={{
+            <label htmlFor="email" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Email</label>
             <input
+              id="email"
               type="email"
               placeholder="you@example.com"
               value={email}
@@ -101,12 +102,13 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Password */}
           <div>
-            <label style={{
+            <label htmlFor="password" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Password</label>
             <input
+              id="password"
               type="password"
               placeholder="••••••••"
               value={password}
