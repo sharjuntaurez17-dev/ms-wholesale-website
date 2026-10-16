@@ -1,0 +1,3 @@
+## 2024-05-24 - Semantic elements masquerading as text
+**Learning:** The application's heavy reliance on inline styles has led to interactive elements (like "Forgot password" or "Sign up" links) being built with inaccessible `<span>` tags rather than native buttons or anchors, completely breaking keyboard navigation and screen reader semantics.
+**Action:** Always inspect custom interactive text elements. Convert them to `<button type="button">` or `<a>` elements and apply a CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to preserve the intended visual design while restoring accessibility.
