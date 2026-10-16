@@ -1,0 +1,3 @@
+## 2024-07-01 - Structural associations and interactive spans in Login
+**Learning:** This application's extensive use of inline styles occasionally leads to interactive elements being incorrectly implemented as inaccessible `<span>` tags. Furthermore, structural associations between `<label>` and `<input>` elements (via `htmlFor` and `id`) are sometimes missing.
+**Action:** Always convert interactive `<span>` elements to native semantic elements (like `<button type="button">`) using the CSS style reset `background: "none", border: "none", padding: 0` to maintain visual appearance while fixing keyboard accessibility. Always explicitly pair `<label>` elements with their respective `<input>` elements using matching `htmlFor` and `id` attributes.
