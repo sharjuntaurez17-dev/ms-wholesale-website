@@ -1,0 +1,3 @@
+## 2024-05-24 - Accessibility corrections in inline styled components
+**Learning:** Found a pattern in this application's components where interactive elements (e.g. links/buttons like "Forgot password?" or "Sign up") were built using `<span>` tags for ease of applying inline styles, causing a loss of semantic keyboard accessibility. Additionally, the forms often omitted `htmlFor` and `id` structural associations between `<label>` and `<input>` elements.
+**Action:** Consistently convert accessible-deficient `<span>` interactions into semantic `<button type="button">` or `<a>` elements and apply reset styles (`background: "none", border: "none", padding: 0`) to preserve visual alignment. Enforce `htmlFor` and `id` pairing on all form inputs.
