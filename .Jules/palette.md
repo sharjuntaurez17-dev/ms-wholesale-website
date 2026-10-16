@@ -1,0 +1,7 @@
+## 2024-06-26 - Semantic Button Conversion for Interactive Text
+**Learning:** In this application, interactive text links (e.g., "Forgot password?", "Sign up") have historically been implemented using `<span>` tags with `cursor: "pointer"` and inline styles. This practice fundamentally breaks keyboard navigation (tabbing) and screen reader support, as `<span>` elements are inherently non-interactive.
+**Action:** When implementing similar interactive elements, always convert them to semantic `<button type="button">` or `<a>` elements. To maintain the existing visual design and prevent unwanted default styling, consistently apply the CSS reset: `background: "none", border: "none", padding: 0`.
+
+## 2024-06-26 - Explicit Form Label Association
+**Learning:** The application's forms occasionally omit explicit structural associations between `<label>` and `<input>` elements (e.g., missing `htmlFor` and `id` attributes). This creates a suboptimal experience for users with screen readers and prevents users from clicking the label text to focus the input field.
+**Action:** Always ensure rigorous adherence to form accessibility standards by explicitly pairing `<label>` elements with their respective `<input>` elements using matching `htmlFor` and `id` attributes.
