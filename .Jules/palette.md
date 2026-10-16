@@ -1,0 +1,3 @@
+## 2024-05-18 - Missing semantic interactive elements
+**Learning:** This application heavily relies on inline styles and `<span>` elements for interactive actions (like "Forgot password?" or "Sign up"), which breaks native keyboard accessibility and screen reader support.
+**Action:** When working on UI components in this app, proactively audit interactive `<span>` or `<div>` elements and convert them to semantic `<button type="button">` elements. Apply a standard CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to maintain the existing visual design while restoring accessibility.
