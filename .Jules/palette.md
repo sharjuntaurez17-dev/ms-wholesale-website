@@ -1,0 +1,3 @@
+## 2024-05-18 - Form Accessibility and Interactive Span Replacements
+**Learning:** React patterns often default to using `<span>` with `onClick` and `cursor: pointer` for secondary interactive actions (like "Forgot password?" and "Sign up"). Additionally, form inputs are often missing proper `id` and `htmlFor` label associations, relying on visual proximity instead.
+**Action:** Always replace interactive `<span>`s with `<button type="button">` to ensure keyboard navigation (tabbing and Enter/Space activation) works naturally. Link `<label>` elements to `<input>` fields using `htmlFor` to provide full support for screen readers.
