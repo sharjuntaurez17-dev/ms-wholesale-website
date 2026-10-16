@@ -83,15 +83,17 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Email */}
           <div>
-            <label style={{
+            <label htmlFor="email" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Email</label>
             <input
+              id="email"
               type="email"
               placeholder="you@example.com"
               value={email}
+              autoComplete="email"
               onChange={e => setEmail(e.target.value)}
               onFocus={() => setFocused("email")}
               onBlur={() => setFocused(null)}
@@ -101,15 +103,17 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Password */}
           <div>
-            <label style={{
+            <label htmlFor="password" style={{
               color: "rgba(255,255,255,0.55)", fontSize: 12, fontWeight: 600,
               letterSpacing: "0.6px", textTransform: "uppercase",
               fontFamily: "'DM Sans', sans-serif", display: "block", marginBottom: 7,
             }}>Password</label>
             <input
+              id="password"
               type="password"
               placeholder="••••••••"
               value={password}
+              autoComplete="current-password"
               onChange={e => setPassword(e.target.value)}
               onFocus={() => setFocused("password")}
               onBlur={() => setFocused(null)}
@@ -119,15 +123,16 @@ export default function LoginScreen({ onLogin }) {
 
           {/* Forgot password */}
           <div style={{ textAlign: "right", marginTop: -6 }}>
-            <span style={{
+            <button type="button" style={{
+              background: "none", border: "none", padding: 0,
               color: C.teal, fontSize: 12.5, fontWeight: 600,
               fontFamily: "'DM Sans', sans-serif", cursor: "pointer",
-            }}>Forgot password?</span>
+            }}>Forgot password?</button>
           </div>
 
           {/* Error */}
           {error && (
-            <div style={{
+            <div role="alert" aria-live="assertive" style={{
               color: "#FF6B6B", fontSize: 13, fontFamily: "'DM Sans', sans-serif",
               background: "rgba(255,107,107,0.1)", borderRadius: 10,
               padding: "10px 14px", border: "1px solid rgba(255,107,107,0.2)",
@@ -138,6 +143,7 @@ export default function LoginScreen({ onLogin }) {
           <button
             type="submit"
             disabled={loading}
+            aria-busy={loading}
             style={{
               marginTop: 6,
               width: "100%", padding: "15px",
@@ -196,9 +202,13 @@ export default function LoginScreen({ onLogin }) {
         fontFamily: "'DM Sans', sans-serif",
       }}>
         Don't have an account?{" "}
-        <span style={{ color: C.teal, fontWeight: 700, cursor: "pointer" }}>
+        <button type="button" style={{
+          background: "none", border: "none", padding: 0,
+          color: C.teal, fontWeight: 700, cursor: "pointer",
+          fontFamily: "'DM Sans', sans-serif", fontSize: 13.5,
+        }}>
           Sign up
-        </span>
+        </button>
       </div>
     </div>
   );
