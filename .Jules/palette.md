@@ -1,0 +1,3 @@
+## 2024-05-18 - Improve Semantic Structure & Keyboard Nav for Inline Styled Components
+**Learning:** In heavily inline-styled applications like this one, basic accessibility patterns are often missed because the styling visually mimics interactive elements. Interactive text components frequently use un-focusable `<span>` tags instead of semantic `<button>` tags, and form fields often lack explicit `id` and `htmlFor` structural relationships.
+**Action:** Always verify that interactive elements use semantic HTML (e.g., `<button type="button">`) with a CSS reset (`background: "none", border: "none", padding: 0, font: "inherit"`) rather than `<span>` tags. Additionally, ensure proper input-to-label structural associations and alert roles for dynamic errors.
