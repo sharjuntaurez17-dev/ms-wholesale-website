@@ -1,0 +1,3 @@
+## 2024-06-23 - Login Form Accessibility and Interactive Elements
+**Learning:** Found explicit structural association issues between `label` and `input` tags, as well as clickable inline text links masquerading as `span` tags. While visually correct, these patterns lack robust accessibility support out of the box.
+**Action:** Replaced structural gaps with `htmlFor` matching the newly-created `id` on respective input fields, and converted clickable text spans (like 'Forgot password?' and 'Sign up') to `button type="button"` paired with a CSS style reset (`background: "none", border: "none", padding: 0`). This enhances accessibility and native keyboard interactions without impacting the visual layout.
