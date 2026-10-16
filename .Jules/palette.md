@@ -1,0 +1,3 @@
+## 2024-07-19 - Fixing Common Form Accessibility Antipatterns
+**Learning:** Found multiple instances where actionable elements (like "Forgot password?" and "Sign up") were implemented as inaccessible `<span>` tags. Additionally, form labels were missing explicit `htmlFor` associations. This breaks keyboard navigation and screen reader support.
+**Action:** When working on UI components in this app, always convert interactive spans/divs into semantic native `<button type="button">` tags (using a CSS style reset) and ensure all `<label>` elements are explicitly linked to their corresponding `<input>` via `htmlFor` and `id`.
