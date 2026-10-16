@@ -1,0 +1,3 @@
+## 2025-06-18 - Making Inline Styled Interactive Text Accessible
+**Learning:** Due to this application's heavy reliance on inline styling for layout and presentation, interactive link-like text strings were incorrectly implemented as `<span>` tags, which are completely skipped by keyboard navigation (Tab) and invisible to screen readers looking for interactive elements.
+**Action:** When making these elements accessible, always convert the `<span>` to a `<button type="button">` and apply the basic CSS style reset (`background: "none", border: "none", padding: 0`). This ensures the visual appearance stays intact with the custom inline styles, while restoring fundamental a11y support.
