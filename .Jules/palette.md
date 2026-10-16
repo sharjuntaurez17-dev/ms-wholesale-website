@@ -1,0 +1,3 @@
+## 2025-02-23 - Interactive Element Accessibility
+**Learning:** Using `<span>` tags with `cursor: pointer` for clickable elements (like "Forgot password?" or "Sign up" links) prevents keyboard navigation and lacks screen reader semantics, which is a common anti-pattern.
+**Action:** Always use `<button>` (for actions) or `<a>` (for navigation) instead of styling `<span>` or `<div>` elements, ensuring they are keyboard focusable and accessible to assistive technologies.
