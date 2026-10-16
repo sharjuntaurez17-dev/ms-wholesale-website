@@ -1,0 +1,3 @@
+## 2024-05-18 - Accessible Form Inputs and Error Messages
+**Learning:** When building accessible forms, especially for screen readers, it is critical to explicitly tie label elements to their corresponding input elements using matching `htmlFor` and `id` attributes. Furthermore, dynamic error messages must have `role="alert"` and `aria-live="polite"` so screen readers announce them when they appear.
+**Action:** Always ensure that form inputs have correctly associated labels using `id` and `htmlFor`. Always use `role="alert"` and `aria-live="polite"` on conditional error components to improve accessibility.
