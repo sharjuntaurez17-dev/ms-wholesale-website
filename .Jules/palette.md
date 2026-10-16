@@ -1,0 +1,3 @@
+## 2024-05-18 - Form Accessibility & Semantic Buttons
+**Learning:** A common pattern in this app is using `<span>` with click handlers for interactive elements (like "Forgot password?" and "Sign up") and failing to structurally associate `<label>` with `<input>` elements using `htmlFor`/`id`.
+**Action:** Always convert interactive `<span>` tags to `<button type="button">` using style reset (`background: "none", border: "none", padding: 0, font: "inherit"`) to maintain visual appearance while ensuring keyboard accessibility. Explicitly pair `<label>` and `<input>` using matching `htmlFor` and `id` attributes.
