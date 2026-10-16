@@ -1,0 +1,3 @@
+## 2024-07-28 - Missing htmlFor and non-button interactive elements
+**Learning:** This application sometimes relies on `<span>` tags with `onClick` handlers for interactive elements (like links/buttons) which prevents keyboard navigation. Form inputs also occasionally lack `htmlFor`/`id` association with their labels, hindering screen readers.
+**Action:** Always convert interactive `<span>`s to `<button type="button">` or `<a>` elements with appropriate style resets (`background: "none", border: "none", padding: 0, font: "inherit"`) to maintain design while gaining keyboard accessibility. Explicitly pair `<label>` and `<input>` using matching `htmlFor` and `id` props.
