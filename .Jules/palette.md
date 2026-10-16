@@ -1,0 +1,3 @@
+## 2024-06-19 - Semantic Buttons for Interactive Elements
+**Learning:** In codebases heavily using inline styles and custom routing, interactive text links are sometimes incorrectly built with `<span>` tags. This creates accessibility issues as they lack keyboard focus (no tab order) and screen reader semantic roles.
+**Action:** When improving UI/UX accessibility, replace interactive `<span>` elements with `<button type="button">` (or `<a>` if URL-based routing is used). Apply a CSS reset (`background: "none", border: "none", padding: 0, outline: "inherit"`) to maintain the exact visual appearance while correctly implementing semantic structure and keyboard navigability.
