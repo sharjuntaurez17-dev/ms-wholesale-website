@@ -1,0 +1,3 @@
+## 2024-05-18 - Semantic clickable elements & Form labels
+**Learning:** Found multiple instances where non-semantic `<span>` tags were used for interactive actions ("Forgot password", "Sign up"). Using `<button>` with reset styles (`background: "none", border: "none"`) gives native keyboard navigability and correct screen reader cues. Furthermore, explicit `id`/`htmlFor` linking enhances accessibility and UX by allowing clicks on labels to focus inputs.
+**Action:** Default to using `<button type="button">` over `<span>` or `<div>` for inline interactive text items and ensure input elements are strictly tied to their descriptive labels.
