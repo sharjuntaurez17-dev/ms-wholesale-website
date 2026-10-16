@@ -1,0 +1,3 @@
+## 2024-03-24 - Accessibility improvements in forms and links
+**Learning:** This app frequently uses interactive inline `<span>` tags with `cursor: pointer` for links and actions. These are not keyboard-accessible by default and screen readers won't identify them as actionable elements. Forms also occasionally lack explicit `htmlFor` pairings between `<label>` and `<input>`.
+**Action:** When working on this application's forms, explicitly pair labels and inputs using `htmlFor` and `id` tags. When converting interactive `<span>`s into accessible interactive elements (like `<button type="button">`), apply the CSS reset `background: "none", border: "none", padding: 0` alongside the existing styles so the element visually remains inline but operates semantically correctly.
