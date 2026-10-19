@@ -1,0 +1,3 @@
+## 2023-10-19 - Ensure Custom React Forms and Errors Remain Accessible
+**Learning:** Adding the native `required` attribute to `input` elements prevents custom React form `onSubmit` handlers from triggering if fields are empty, blocking the rendering of React-based dynamic error messages. Additionally, dynamically rendered React custom error messages are completely hidden from screen readers without specific container roles.
+**Action:** Always add `noValidate` to the `<form>` element when relying on custom React validation states to ensure the `onSubmit` logic fires properly. For dynamic error containers, always add `role="alert"` and `aria-live="polite"` so screen readers proactively announce the custom errors upon rendering.
