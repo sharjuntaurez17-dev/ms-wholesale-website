@@ -1,0 +1,3 @@
+## 2024-10-22 - Form Accessibility with React Validation
+**Learning:** When using custom React validation and maintaining native HTML `required` attributes for screen readers, the browser will block the form's `onSubmit` event handler if fields are empty, preventing custom React error messages from showing.
+**Action:** Add the `noValidate` attribute to the `<form>` element to bypass native HTML5 validation blocking while retaining semantic `required` attributes for screen readers. Ensure conditional error messages have `role="alert"` and `aria-live="polite"` for accurate announcements, and properly link `<label>` and `<input>` using matching `htmlFor` and `id` attributes.
