@@ -1,0 +1,3 @@
+## 2024-10-24 - Convert Clickable Spans to Accessible Buttons
+**Learning:** In this application, interactive elements like "Forgot password?" or "Sign up" are sometimes implemented as `<span>` tags with `cursor: "pointer"`, missing keyboard accessibility (focus/enter to activate).
+**Action:** Convert these `<span>` elements to `<button type="button">` using the CSS style reset `background: "none", border: "none", padding: 0, font: "inherit"` to maintain visual appearance while enabling native keyboard and screen reader accessibility.
