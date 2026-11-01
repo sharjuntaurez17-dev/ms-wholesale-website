@@ -1,0 +1,3 @@
+## 2024-11-01 - Form Accessibility
+**Learning:** Missing `htmlFor` and `id` on form labels and inputs causes accessibility issues. Error message containers missing `role="alert"` and `aria-live="polite"` make dynamic errors inaccessible to screen readers. Missing native validation props (`required`, `aria-required`) make fields seem optional to AT.
+**Action:** When working on form inputs, ensure labels are paired using matching `htmlFor`/`id`, inputs have appropriate ARIA and validation properties, and dynamic error messages are housed in `role="alert"` containers. Use `noValidate` on forms where custom React validation is primarily used and we want native `onSubmit` to fire even if fields are empty to trigger custom state.
