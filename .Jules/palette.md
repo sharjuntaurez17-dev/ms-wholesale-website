@@ -1,0 +1,3 @@
+## 2024-03-24 - Form Accessibility & Custom Validation
+**Learning:** When using custom React form validation (e.g., overriding native `onSubmit` to display conditional error messages), adding native HTML5 `required` attributes will prevent the form submission handler from firing if fields are empty, blocking the custom UI error from displaying.
+**Action:** When implementing semantic validation structure (adding `required` and `aria-required="true"` to inputs), always add `noValidate` to the `<form>` wrapper to suppress native browser tooltips and preserve custom validation logic and UI error displays. Additionally, ensure dynamically rendered error messages contain `role="alert"` and `aria-live="polite"` for screen readers.
