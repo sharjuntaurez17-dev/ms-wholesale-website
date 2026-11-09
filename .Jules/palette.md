@@ -1,0 +1,3 @@
+## 2024-05-18 - Form Validation Accessibility
+**Learning:** In custom React forms, adding native HTML5 `required` attributes can block `onSubmit` handlers. Furthermore, dynamic conditional error messages (e.g., `{error && <div>...</div>}`) are not announced to screen readers unless configured correctly.
+**Action:** When making custom React forms accessible, explicitly pair `<label>` and `<input>` using matching `htmlFor` and `id`, include `required` and `aria-required="true"`, add `noValidate` to the `<form>` to prevent browser tooltip blocking, and ensure the error message container uses `role="alert"` and `aria-live="polite"`.
